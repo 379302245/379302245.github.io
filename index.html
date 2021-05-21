@@ -71,6 +71,44 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-hightcharts1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/05/21/hightcharts1/" class="article-date">
+  <time class="dt-published" datetime="2021-05-21T09:01:10.000Z" itemprop="datePublished">2021-05-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/05/21/hightcharts1/">hightcharts1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/05/21/hightcharts1/" data-id="ckoy51t1b00006o4ka93bg3y2" data-title="hightcharts1" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-multilinetext" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/05/21/multilinetext/" class="article-date">
@@ -85,7 +123,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/05/21/multilinetext/">css实现多行文本&#34;展开收起&#34;</a>
+      <a class="p-name article-title" href="/2021/05/21/multilinetext/">css隐藏有几种方式？</a>
     </h1>
   
 
@@ -93,11 +131,33 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="CSS-实现多行文本“展开收起”"><a href="#CSS-实现多行文本“展开收起”" class="headerlink" title="CSS 实现多行文本“展开收起”"></a>CSS 实现多行文本“展开收起”</h1><h3 id=""><a href="#" class="headerlink" title=""></a></h3>
+        <h1 id="css隐藏有几种方式？"><a href="#css隐藏有几种方式？" class="headerlink" title="css隐藏有几种方式？"></a>css隐藏有几种方式？</h1><p>一共有有4种实现方式</p>
+<ul>
+<li>display:none; </li>
+<li>overflow:hedden; </li>
+<li>opctie:0; </li>
+<li>设置宽度width, 高度height为0</li>
+</ul>
+<h3 id="display-none"><a href="#display-none" class="headerlink" title="display:none;"></a>display:none;</h3><p>设置元素的display为none是最常用的隐藏元素的方法。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.hide</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>将元素设置为display:none后，元素在页面上将彻底消失，元素本来占有的空间就会被其他元素占有。<br>它会导致浏览器的<strong>重排</strong>和<strong>重绘</strong>。</p>
+<h3 id="visibility-hidden"><a href="#visibility-hidden" class="headerlink" title="visibility:hidden"></a>visibility:hidden</h3><p>visibility:hidden适用于那些元素隐藏后不希望页面布局会发生变化的场景</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.hide</span> &#123;</span><br><span class="line">    <span class="attribute">visibility</span>: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>设置元素的visibility为hidden也是一种常用的隐藏元素的方法，和display:none的区别在于，元素在页面消失后，其占据的空间依旧会保留着。<br>它会导致浏览器<strong>重绘</strong>而<strong>不会重排</strong>。</p>
+<h3 id="opacity-0"><a href="#opacity-0" class="headerlink" title="opacity:0"></a>opacity:0</h3><p>opacity属性表示元素的透明度，将元素的透明度设置为0后，在用户眼中，元素也是隐藏的。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.hide</span> &#123;</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这种方法和visibility:hidden的一个共同点是元素隐藏后依旧占据着空间，但我们都知道，设置透明度为0后，元素只是隐身了，它依旧存在页面中。</p>
+<h3 id="设置高度height，宽度width等盒模型属性为0"><a href="#设置高度height，宽度width等盒模型属性为0" class="headerlink" title="设置高度height，宽度width等盒模型属性为0"></a>设置高度height，宽度width等盒模型属性为0</h3><p>奇技淫巧</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.hide</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/21/multilinetext/" data-id="ckoxrt9ml0000ag4khdcq8q1f" data-title="css实现多行文本&#34;展开收起&#34;" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/05/21/multilinetext/" data-id="ckoxrt9ml0000ag4khdcq8q1f" data-title="css隐藏有几种方式？" class="article-share-link">Share</a>
       
       
       
@@ -191,7 +251,11 @@
       <ul>
         
           <li>
-            <a href="/2021/05/21/multilinetext/">css实现多行文本&#34;展开收起&#34;</a>
+            <a href="/2021/05/21/hightcharts1/">hightcharts1</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/21/multilinetext/">css隐藏有几种方式？</a>
           </li>
         
           <li>
